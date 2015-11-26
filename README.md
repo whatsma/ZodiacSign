@@ -1,6 +1,9 @@
 # ZodiacSign
 Calculates zodiac sign from day and month.
 
+### Status
+[![Build Status](https://travis-ci.org/whatsma/ZodiacSign.png)](https://travis-ci.org/whatsma/ZodiacSign)
+
 Given a month (integer from 1 to 12) and a day (integer from 1 to 31), calculate the zodiac sign.
 
 Returns one of the following strings, representing the zodiac sign:
