@@ -1,13 +1,14 @@
 <?php
 
-require_once '../src/zodiacsign.php';
+require_once '../src/Calculator.php';
 
+$calculator = new Whatsma\ZodiacSign\Calculator();
 
 $day = 30;
 $month = 2;
 
 try {
-    echo Whatsma\ZodiacSign\zodiac_sign($day, $month) . "\n";
+    echo $calculator->calculate($day, $month) . "\n";
 } catch (Whatsma\ZodiacSign\InvalidMonthException $e) {
     print "INVALID MONTH: " . $e->getMessage() . "\n";
 } catch (Whatsma\ZodiacSign\InvalidDayException $e) {
