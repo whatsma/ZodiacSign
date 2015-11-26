@@ -1,19 +1,6 @@
 <?php
 namespace Whatsma\ZodiacSign;
 
-class InvalidMonthException extends \InvalidArgumentException
-{
-}
-
-class InvalidDayException extends \InvalidArgumentException
-{
-}
-
-function days_in_month($month)
-{
-    return $month == 2 ? 29 : (($month - 1) % 7 % 2 ? 30 : 31);
-}
-
 
 
 class Calculator
@@ -28,7 +15,7 @@ class Calculator
     
         // validate day
         $day = intval($day);
-        if (($day < 1) || ($day > days_in_month($month))) {
+        if (($day < 1) || ($day > $this->days_in_month($month))) {
             throw new InvalidDayException("invalid day: $day for month $month");
         }
     
@@ -60,4 +47,12 @@ class Calculator
              return "capricorn";
         }
     }
+
+
+
+    function days_in_month($month)
+    {
+        return $month == 2 ? 29 : (($month - 1) % 7 % 2 ? 30 : 31);
+    }
+
 }
