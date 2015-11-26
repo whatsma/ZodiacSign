@@ -1,0 +1,21 @@
+{
+    "name": "whatsma/zodiacsign",
+    "description": "Calculates a zodiac sign from a day and month value.",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Wha Tsma",
+            "email": "whatsma@whatzodiacsignami.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "HelloWorld": "src/"
+        }
+    }
+}
