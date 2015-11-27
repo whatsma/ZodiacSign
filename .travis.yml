@@ -15,9 +15,9 @@ before_script:
 script:
   - phpunit
   - if hash hhvm 2>/dev/null; then
-      hhvm code-coverage/checker.php clover.xml 75
+      hhvm code-coverage/checker.php clover.xml 75;
     else
-      php code-coverage/checker.php clover.xml 75
+      php code-coverage/checker.php clover.xml 75;
     fi
 
 notifications:
