@@ -10,13 +10,13 @@ class Calculator
         // validate month
         $month = intval($month);
         if (($month < 1) || ($month > 12)) {
-            throw new InvalidMonthException("$month");
+            throw new InvalidMonthException();
         }
     
         // validate day
         $day = intval($day);
         if (($day < 1) || ($day > $this->days_in_month($month))) {
-            throw new InvalidDayException("invalid day: $day for month $month");
+            throw new InvalidDayException();
         }
     
     
