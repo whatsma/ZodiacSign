@@ -14,7 +14,7 @@ before_script:
  
 script:
   - phpunit
-  - if hash php 2>/dev/null; then php code-coverage/checker.php clover.xml 90; fi
+  - if [ -s clover.xml ] ; then php code-coverage/checker.php clover.xml 90; fi
 
 notifications:
   email: true
