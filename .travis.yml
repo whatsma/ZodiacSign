@@ -16,6 +16,7 @@ script:
   - phpunit
   - if hash hhvm 2>/dev/null; then hhvm code-coverage/checker.php clover.xml 90; fi
   - if hash php 2>/dev/null; then php code-coverage/checker.php clover.xml 90; fi
+  - ls -R
   - cat clover.xml
 
 notifications:
