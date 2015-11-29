@@ -13,8 +13,7 @@ before_script:
   - composer install --prefer-source --no-interaction --dev
  
 script:
-  - phpunit
-  - if [ -s clover.xml ] ; then php code-coverage/checker.php clover.xml 90; fi
+  - phpunit --coverage-clover
 
 notifications:
   email: true
