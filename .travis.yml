@@ -13,8 +13,7 @@ before_script:
   - composer install --prefer-source --no-interaction --dev
  
 script:
-  - echo $TRAVIS_PHP_VERSION
-  - phpunit -v --coverage-clover clover.xml
+  - phpunit --coverage-clover clover.xml
 
 notifications:
   email: true
