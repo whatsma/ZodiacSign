@@ -1,2 +1,3 @@
 finish checkEverySign test
 remove phpcs & phpunit from require_dev and instead install them via .travis.yml
+
