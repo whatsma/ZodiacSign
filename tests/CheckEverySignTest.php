@@ -1,10 +1,13 @@
 <?php
+namespace Whatsma\ZodiacSign;
+
 use Whatsma\ZodiacSign\Calculator;
  
-class CheckEverySignTest extends PHPUnit_Framework_TestCase {
+class CheckEverySignTest extends PHPUnit_Framework_TestCase
+{
  
     public function testInvalidMonth()
-        {
+    {
         $calculator = new Calculator;
 
         $this->assertTrue($calculator->calculate(1, 1) == "capricorn");
@@ -19,6 +22,5 @@ class CheckEverySignTest extends PHPUnit_Framework_TestCase {
         $this->assertTrue($calculator->calculate(1, 10) == "libra");
         $this->assertTrue($calculator->calculate(1, 11) == "scorpio");
         $this->assertTrue($calculator->calculate(1, 12) == "sagittarius");
-        }
-
+    }
 }
