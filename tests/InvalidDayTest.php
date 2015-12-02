@@ -1,6 +1,4 @@
 <?php
-namespace Whatsma\ZodiacSign;
-
 use Whatsma\ZodiacSign\Calculator;
  
 class InvalidDayTest extends PHPUnit_Framework_TestCase
