@@ -1,11 +1,9 @@
 <?php
 namespace Whatsma\ZodiacSign;
 
-
-
 class Calculator
 {
-    function calculate($day, $month)
+    public function calculate($day, $month)
     {
         // validate month
         $month = intval($month);
@@ -15,7 +13,7 @@ class Calculator
     
         // validate day
         $day = intval($day);
-        if (($day < 1) || ($day > $this->days_in_month($month))) {
+        if (($day < 1) || ($day > $this->daysInMonth($month))) {
             throw new InvalidDayException();
         }
     
@@ -50,9 +48,8 @@ class Calculator
 
 
 
-    function days_in_month($month)
+    public function daysInMonth($month)
     {
         return $month == 2 ? 29 : (($month - 1) % 7 % 2 ? 30 : 31);
     }
-
 }
