@@ -14,7 +14,7 @@ before_script:
  
 script:
   - phpunit --coverage-clover clover.xml
-  - ./vendor/bin/phpcs --standard=PSR2 src
+  - ./vendor/bin/phpcs --standard=PSR2 src tests
 
 notifications:
   email:
