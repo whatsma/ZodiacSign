@@ -13,9 +13,9 @@ before_script:
   - composer install --prefer-source --no-interaction --dev
  
 script:
-  - phpunit --coverage-clover clover.xml
+  - phpunit --coverage-clover build/logs/clover.xml
   - ./vendor/bin/phpcs --standard=PSR2 src tests
-  - CODECLIMATE_REPO_TOKEN=de3856e94e9deecd707602c930be1359597c12f930e51d94cb25722d6ae52daf ./vendor/bin/test-reporter --coverage-clover clover.xml
+  - CODECLIMATE_REPO_TOKEN=de3856e94e9deecd707602c930be1359597c12f930e51d94cb25722d6ae52daf ./vendor/bin/test-reporter
 
 notifications:
   email:
