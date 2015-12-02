@@ -1,7 +1,9 @@
 <?php
+namespace Whatsma\ZodiacSign;
+
 use Whatsma\ZodiacSign\Calculator;
  
-class DaysInMonthsTest extends PHPUnit_Framework_TestCase
+class DaysInMonthsTest extends \PHPUnit_Framework_TestCase
 {
     public function testInvalidMonth()
     {
