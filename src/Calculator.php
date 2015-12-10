@@ -5,72 +5,65 @@ class Calculator
 {
     public function calculate($day, $month)
     {
-        // validate day
-        $day = intval($day);
-        if (($day < 1) || ($day > $this->daysInMonth($month))) {
-            throw new InvalidDayException();
-        }
-    
-        // calculate zodiac sign
         switch ($month) {
             case 1:
                 // january
-                return $this->split($day, 20, "capricorn", "aquarius");
+                return $this->monthSplit($day, 20, "capricorn", "aquarius", 31);
                 break;
 
             case 2:
                 // february
-                return $this->split($day, 19, "aquarius", "pisces");
+                return $this->monthSplit($day, 19, "aquarius", "pisces", 29);
                 break;
 
             case 3:
                 // march
-                return $this->split($day, 20, "pisces", "aries");
+                return $this->monthSplit($day, 20, "pisces", "aries", 31);
                 break;
 
             case 4:
                 // april
-                return $this->split($day, 20, "aries", "taurus");
+                return $this->monthSplit($day, 20, "aries", "taurus", 30);
                 break;
 
             case 5:
                 // may
-                return $this->split($day, 21, "taurus", "gemini");
+                return $this->monthSplit($day, 21, "taurus", "gemini", 31);
                 break;
 
             case 6:
                 // june
-                return $this->split($day, 21, "gemini", "cancer");
+                return $this->monthSplit($day, 21, "gemini", "cancer", 30);
                 break;
 
             case 7:
                 // july
-                return $this->split($day, 22, "cancer", "leo");
+                return $this->monthSplit($day, 22, "cancer", "leo", 31);
                 break;
 
             case 8:
                 // august
-                return $this->split($day, 22, "leo", "virgo");
+                return $this->monthSplit($day, 22, "leo", "virgo", 31);
                 break;
 
             case 9:
                 // september
-                return $this->split($day, 23, "virgo", "libra");
+                return $this->monthSplit($day, 23, "virgo", "libra", 30);
                 break;
 
             case 10:
                 // october
-                return $this->split($day, 23, "libra", "scorpio");
+                return $this->monthSplit($day, 23, "libra", "scorpio", 31);
                 break;
 
             case 11:
                 // november
-                return $this->split($day, 22, "scorpio", "sagittarius");
+                return $this->monthSplit($day, 22, "scorpio", "sagittarius", 30);
                 break;
 
             case 12:
                 // december
-                return $this->split($day, 21, "sagittarius", "capricorn");
+                return $this->monthSplit($day, 21, "sagittarius", "capricorn", 31);
                 break;
 
             default:
@@ -80,15 +73,12 @@ class Calculator
 
 
 
-    public function daysInMonth($month)
+    protected function monthSplit($day, $break, $firstSign, $secondSign, $maximumDaysInMonth)
     {
-        return $month == 2 ? 29 : (($month - 1) % 7 % 2 ? 30 : 31);
-    }
+        if (($day < 1) || ($day > $maximumDaysInMonth)) {
+            throw new InvalidDayException();
+        }
 
-
-
-    protected function split($day, $break, $firstSign, $secondSign)
-    {
         return $day <= $break ? $firstSign : $secondSign;
     }
 }
