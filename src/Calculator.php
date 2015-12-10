@@ -13,51 +13,63 @@ class Calculator
     
         // calculate zodiac sign
         switch ($month) {
-            case 1: // january
+            case 1:
+                // january
                 return $this->split($day, 20, "capricorn", "aquarius");
                 break;
 
-            case 2: // february
+            case 2:
+                // february
                 return $this->split($day, 19, "aquarius", "pisces");
                 break;
 
-            case 3: // march
+            case 3:
+                // march
                 return $this->split($day, 20, "pisces", "aries");
                 break;
 
-            case 4: // april
+            case 4:
+                // april
                 return $this->split($day, 20, "aries", "taurus");
                 break;
 
-            case 5: // may
+            case 5:
+                // may
                 return $this->split($day, 21, "taurus", "gemini");
                 break;
 
-            case 6: // june
+            case 6:
+                // june
                 return $this->split($day, 21, "gemini", "cancer");
                 break;
 
-            case 7: // july
+            case 7:
+                // july
                 return $this->split($day, 22, "cancer", "leo");
                 break;
 
-            case 8: // august
+            case 8:
+                // august
                 return $this->split($day, 22, "leo", "virgo");
                 break;
 
-            case 9: // september
+            case 9:
+                // september
                 return $this->split($day, 23, "virgo", "libra");
                 break;
 
-            case 10: // october
+            case 10:
+                // october
                 return $this->split($day, 23, "libra", "scorpio");
                 break;
 
-            case 11: // november
+            case 11:
+                // november
                 return $this->split($day, 22, "scorpio", "sagittarius");
                 break;
 
-            case 12: // december
+            case 12:
+                // december
                 return $this->split($day, 21, "sagittarius", "capricorn");
                 break;
 
