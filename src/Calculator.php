@@ -14,99 +14,51 @@ class Calculator
         // calculate zodiac sign
         switch ($month) {
             case 1: // january
-                if ($day <= 20) {
-                    return "capricorn";
-                } else {
-                    return "aquarius";
-                }
+                return $this->split($day, 20, "capricorn", "aquarius");
                 break;
 
             case 2: // february
-                if ($day <= 19) {
-                    return "aquarius";
-                } else {
-                    return "pisces";
-                }
+                return $this->split($day, 19, "aquarius", "pisces");
                 break;
 
             case 3: // march
-                if ($day <= 20) {
-                    return "pisces";
-                } else {
-                    return "aries";
-                }
+                return $this->split($day, 20, "pisces", "aries");
                 break;
 
             case 4: // april
-                if ($day <= 20) {
-                    return "aries";
-                } else {
-                    return "taurus";
-                }
+                return $this->split($day, 20, "aries", "taurus");
                 break;
 
             case 5: // may
-                if ($day <= 21) {
-                    return "taurus";
-                } else {
-                    return "gemini";
-                }
+                return $this->split($day, 21, "taurus", "gemini");
                 break;
 
             case 6: // june
-                if ($day <= 21) {
-                    return "gemini";
-                } else {
-                    return "cancer";
-                }
+                return $this->split($day, 21, "gemini", "cancer");
                 break;
 
             case 7: // july
-                if ($day <= 22) {
-                    return "cancer";
-                } else {
-                    return "leo";
-                }
+                return $this->split($day, 22, "cancer", "leo");
                 break;
 
             case 8: // august
-                if ($day <= 22) {
-                    return "leo";
-                } else {
-                    return "virgo";
-                }
+                return $this->split($day, 22, "leo", "virgo");
                 break;
 
             case 9: // september
-                if ($day <= 23) {
-                    return "virgo";
-                } else {
-                    return "libra";
-                }
+                return $this->split($day, 23, "virgo", "libra");
                 break;
 
             case 10: // october
-                if ($day <= 23) {
-                    return "libra";
-                } else {
-                    return "scorpio";
-                }
+                return $this->split($day, 23, "libra", "scorpio");
                 break;
 
             case 11: // november
-                if ($day <= 22) {
-                    return "scorpio";
-                } else {
-                    return "sagittarius";
-                }
+                return $this->split($day, 22, "scorpio", "sagittarius");
                 break;
 
             case 12: // december
-                if ($day <= 21) {
-                    return "sagittarius";
-                } else {
-                    return "capricorn";
-                }
+                return $this->split($day, 21, "sagittarius", "capricorn");
                 break;
 
             default:
@@ -119,5 +71,16 @@ class Calculator
     public function daysInMonth($month)
     {
         return $month == 2 ? 29 : (($month - 1) % 7 % 2 ? 30 : 31);
+    }
+
+
+
+    protected function split($day, $break, $firstSign, $secondSign)
+    {
+        if ($day <= $break) {
+            return $firstSign;
+        } else {
+            return $secondSign;
+        }
     }
 }
