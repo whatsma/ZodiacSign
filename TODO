@@ -1,2 +1,2 @@
 remove phpcs & phpunit from require_dev and instead install them via .travis.yml
-factorisation
+change repo name?
