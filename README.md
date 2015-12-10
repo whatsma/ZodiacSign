@@ -1,11 +1,13 @@
 # ZodiacSign
-Zodiac Sign is a php Calculator to calculate a zodiac sign from an input day and month.
+Zodiac Sign provides a php calculator to calculate the zodiac sign from a given day and month.
 
-### Status
+## Status
 [![Build Status](https://travis-ci.org/whatsma/ZodiacSign.png)](https://travis-ci.org/whatsma/ZodiacSign)
 [![Test Coverage](https://codeclimate.com/github/whatsma/ZodiacSign/badges/coverage.svg)](https://codeclimate.com/github/whatsma/ZodiacSign/coverage)
 [![Code Climate](https://codeclimate.com/github/whatsma/ZodiacSign/badges/gpa.svg)](https://codeclimate.com/github/whatsma/ZodiacSign)
 
+
+## Oveview
 
 Given a month (integer from 1 to 12) and a day (integer from 1 to 31), calculate the zodiac sign.
 
