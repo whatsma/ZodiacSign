@@ -8,132 +8,125 @@ class EdgeCaseTest extends \PHPUnit_Framework_TestCase
     public function testAries()
     {
         // 21 March – 20 April
-        $calculator = new Calculator;
+        $start = array(21, 3);
+        $end = array (20, 4);
 
-        $this->assertTrue($calculator->calculate(20, 3) != "aries");
-        $this->assertTrue($calculator->calculate(21, 3) == "aries");
-        $this->assertTrue($calculator->calculate(20, 4) == "aries");
-        $this->assertTrue($calculator->calculate(21, 4) != "aries");
+        $this->edgeCases($start, $end, "aries");
     }
  
     public function testTaurus()
     {
         // 21 April – 21 May
-        $calculator = new Calculator;
+        $start = array(21, 4);
+        $end = array (21, 5);
 
-        $this->assertTrue($calculator->calculate(20, 4) != "taurus");
-        $this->assertTrue($calculator->calculate(21, 4) == "taurus");
-        $this->assertTrue($calculator->calculate(21, 5) == "taurus");
-        $this->assertTrue($calculator->calculate(22, 5) != "taurus");
+        $this->edgeCases($start, $end, "taurus");
     }
  
     public function testGemini()
     {
         // 22 May – 21 June
-        $calculator = new Calculator;
+        $start = array(22, 5);
+        $end = array (21, 6);
 
-        $this->assertTrue($calculator->calculate(21, 5) != "gemini");
-        $this->assertTrue($calculator->calculate(22, 5) == "gemini");
-        $this->assertTrue($calculator->calculate(21, 6) == "gemini");
-        $this->assertTrue($calculator->calculate(22, 6) != "gemini");
+        $this->edgeCases($start, $end, "gemini");
     }
 
     public function testCancer()
     {
         // 22 June – 22 July
-        $calculator = new Calculator;
+        $start = array(22, 6);
+        $end = array (22, 7);
 
-        $this->assertTrue($calculator->calculate(21, 6) != "cancer");
-        $this->assertTrue($calculator->calculate(22, 6) == "cancer");
-        $this->assertTrue($calculator->calculate(22, 7) == "cancer");
-        $this->assertTrue($calculator->calculate(23, 7) != "cancer");
+        $this->edgeCases($start, $end, "cancer");
     }
 
     public function testLeo()
     {
         // 23 July – 22 August
-        $calculator = new Calculator;
+        $start = array(23, 7);
+        $end = array (22, 8);
 
-        $this->assertTrue($calculator->calculate(22, 7) != "leo");
-        $this->assertTrue($calculator->calculate(23, 7) == "leo");
-        $this->assertTrue($calculator->calculate(22, 8) == "leo");
-        $this->assertTrue($calculator->calculate(23, 8) != "leo");
+        $this->edgeCases($start, $end, "leo");
     }
 
     public function testVirgo()
     {
         // 23 August – 23 September
-        $calculator = new Calculator;
+        $start = array(23, 8);
+        $end = array (23, 9);
 
-        $this->assertTrue($calculator->calculate(22, 8) != "virgo");
-        $this->assertTrue($calculator->calculate(23, 8) == "virgo");
-        $this->assertTrue($calculator->calculate(23, 9) == "virgo");
-        $this->assertTrue($calculator->calculate(24, 9) != "virgo");
+        $this->edgeCases($start, $end, "virgo");
     }
 
     public function testLibra()
     {
         // 24 September – 23 October
-        $calculator = new Calculator;
+        $start = array(24, 9);
+        $end = array (23, 10);
 
-        $this->assertTrue($calculator->calculate(23, 9) != "libra");
-        $this->assertTrue($calculator->calculate(24, 9) == "libra");
-        $this->assertTrue($calculator->calculate(23, 10) == "libra");
-        $this->assertTrue($calculator->calculate(24, 10) != "libra");
+        $this->edgeCases($start, $end, "libra");
     }
 
     public function testScorpio()
     {
         // 24 October – 22 November
-        $calculator = new Calculator;
+        $start = array(24, 10);
+        $end = array (22, 11);
 
-        $this->assertTrue($calculator->calculate(23, 10) != "scorpio");
-        $this->assertTrue($calculator->calculate(24, 10) == "scorpio");
-        $this->assertTrue($calculator->calculate(22, 11) == "scorpio");
-        $this->assertTrue($calculator->calculate(23, 11) != "scorpio");
+        $this->edgeCases($start, $end, "scorpio");
     }
 
     public function testSagittarius()
     {
         // 23 November – 21 December
-        $calculator = new Calculator;
+        $start = array(23, 11);
+        $end = array (21, 12);
 
-        $this->assertTrue($calculator->calculate(22, 11) != "sagittarius");
-        $this->assertTrue($calculator->calculate(23, 11) == "sagittarius");
-        $this->assertTrue($calculator->calculate(21, 12) == "sagittarius");
-        $this->assertTrue($calculator->calculate(22, 12) != "sagittarius");
+        $this->edgeCases($start, $end, "sagittarius");
     }
 
     public function testCapricorn()
     {
         // 22 December – 20 January
-        $calculator = new Calculator;
+        $start = array(22, 12);
+        $end = array (20, 1);
 
-        $this->assertTrue($calculator->calculate(21, 12) != "capricorn");
-        $this->assertTrue($calculator->calculate(22, 12) == "capricorn");
-        $this->assertTrue($calculator->calculate(20, 1)  == "capricorn");
-        $this->assertTrue($calculator->calculate(21, 1)  != "capricorn");
+        $this->edgeCases($start, $end, "capricorn");
     }
 
     public function testAquarius()
     {
         // 21 January – 19 February
-        $calculator = new Calculator;
+        $start = array(21, 1);
+        $end = array (19, 2);
 
-        $this->assertTrue($calculator->calculate(20, 1) != "aquarius");
-        $this->assertTrue($calculator->calculate(21, 1) == "aquarius");
-        $this->assertTrue($calculator->calculate(19, 2)  == "aquarius");
-        $this->assertTrue($calculator->calculate(20, 2)  != "aquarius");
+        $this->edgeCases($start, $end, "aquarius");
     }
 
     public function testPisces()
     {
         // 20 February – 20 March
+        $start = array(20, 2);
+        $end = array (20, 3);
+
+        $this->edgeCases($start, $end, "pisces");
+    }
+
+    protected function edgeCases($first, $last, $sign)
+    {
         $calculator = new Calculator;
 
-        $this->assertTrue($calculator->calculate(19, 2) != "pisces");
-        $this->assertTrue($calculator->calculate(20, 2) == "pisces");
-        $this->assertTrue($calculator->calculate(20, 3) == "pisces");
-        $this->assertTrue($calculator->calculate(21, 3) != "pisces");
+        // day before first day
+        $this->assertFalse($calculator->calculate($first[0]-1, $first[1])==$sign);
+
+        // first day
+        $this->assertTrue($calculator->calculate($first[0], $first[1])==$sign);
+
+        // last day
+        $this->assertTrue($calculator->calculate($last[0], $last[1])==$sign);
+
+        // day after last day
+        $this->assertFalse($calculator->calculate($last[0]+1, $last[1])==$sign);
     }
 }
