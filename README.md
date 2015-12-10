@@ -1,5 +1,5 @@
 # ZodiacSign
-Calculates zodiac sign from day and month.
+Zodiac Sign is a php Calculator to calculate a zodiac sign from an input day and month.
 
 ### Status
 [![Build Status](https://travis-ci.org/whatsma/ZodiacSign.png)](https://travis-ci.org/whatsma/ZodiacSign)
