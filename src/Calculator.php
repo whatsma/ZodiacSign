@@ -11,10 +11,8 @@ class Calculator
             throw new InvalidDayException();
         }
     
-    
         // calculate zodiac sign
-        switch ($month) 
-        {
+        switch ($month) {
             case 1: // january
                 if ($day <= 20) {
                     return "capricorn";
