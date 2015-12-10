@@ -89,6 +89,6 @@ class Calculator
 
     protected function split($day, $break, $firstSign, $secondSign)
     {
-      return $day <= $break ? $firstSign : $secondSign;
+        return $day <= $break ? $firstSign : $secondSign;
     }
 }
