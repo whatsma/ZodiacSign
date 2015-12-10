@@ -8,8 +8,8 @@ class DaysInMonthsTest extends \PHPUnit_Framework_TestCase
 {
     public function testDaysInJanuary()
     {
-        $this->shouldPass (31, 1);
-        $this->shouldFail (32, 1);
+        $this->shouldPass(31, 1);
+        $this->shouldFail(32, 1);
     }
 
 
