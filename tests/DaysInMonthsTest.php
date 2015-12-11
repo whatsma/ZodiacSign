@@ -6,96 +6,53 @@ use Whatsma\ZodiacSign\InvalidDayException;
  
 class DaysInMonthsTest extends \PHPUnit_Framework_TestCase
 {
-    public function testDaysInJanuary()
+    public function testDays()
     {
+        // january
         $this->shouldPass(31, 1);
         $this->shouldFail(32, 1);
-    }
 
-
-
-    public function testDaysInFebruary()
-    {
+        // february
         $this->shouldPass(29, 2);
         $this->shouldFail(30, 2);
-    }
 
-
-
-    public function testDaysInMarch()
-    {
+        // march
         $this->shouldPass(31, 3);
         $this->shouldFail(32, 3);
-    }
 
-
-
-    public function testDaysInApril()
-    {
+        // april
         $this->shouldPass(30, 4);
         $this->shouldFail(31, 4);
-    }
 
-
-
-    public function testDaysInMay()
-    {
+        // may
         $this->shouldPass(31, 5);
         $this->shouldFail(32, 5);
-    }
 
-
-
-    public function testDaysInJune()
-    {
+        // june
         $this->shouldPass(30, 6);
         $this->shouldFail(31, 6);
-    }
 
-
-
-    public function testDaysInJuly()
-    {
+        // july
         $this->shouldPass(31, 7);
         $this->shouldFail(32, 7);
-    }
 
-
-
-    public function testDaysInAugust()
-    {
+        // august
         $this->shouldPass(31, 8);
         $this->shouldFail(32, 8);
-    }
 
-
-
-    public function testDaysInSeptember()
-    {
+        // september
         $this->shouldPass(30, 9);
         $this->shouldFail(31, 9);
-    }
 
-
-
-    public function testDaysInOctober()
-    {
+        // october
         $this->shouldPass(31, 10);
         $this->shouldFail(32, 10);
-    }
 
-
-
-    public function testDaysInNovember()
-    {
+        // november
         $this->shouldPass(30, 11);
         $this->shouldFail(31, 11);
-    }
 
-
-
-    public function testDaysInDecember()
-    {
+        // december
         $this->shouldPass(31, 12);
         $this->shouldFail(32, 12);
     }
