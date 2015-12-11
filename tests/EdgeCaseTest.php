@@ -5,112 +5,43 @@ use Whatsma\ZodiacSign\Calculator;
  
 class EdgeCaseTest extends \PHPUnit_Framework_TestCase
 {
-    public function testAries()
+    public function testSigns()
     {
-        // 21 March – 20 April
-        $start = array(21, 3);
-        $end = array (20, 4);
+        // 21 March – 20 April - aries
+        $this->edgeCases(array(21, 3), array(20, 4), "aries");
 
-        $this->edgeCases($start, $end, "aries");
-    }
- 
-    public function testTaurus()
-    {
-        // 21 April – 21 May
-        $start = array(21, 4);
-        $end = array (21, 5);
+        // 21 April – 21 May - taurus
+        $this->edgeCases(array(21, 4), array(21, 5), "taurus");
 
-        $this->edgeCases($start, $end, "taurus");
-    }
- 
-    public function testGemini()
-    {
-        // 22 May – 21 June
-        $start = array(22, 5);
-        $end = array (21, 6);
+        // 22 May – 21 June - gemini
+        $this->edgeCases(array(22, 5), array(21, 6), "gemini");
 
-        $this->edgeCases($start, $end, "gemini");
-    }
+        // 22 June – 22 July - cancer
+        $this->edgeCases(array(22,6), array(22, 7), "cancer");
 
-    public function testCancer()
-    {
-        // 22 June – 22 July
-        $start = array(22, 6);
-        $end = array (22, 7);
+        // 23 July – 22 August - leo
+        $this->edgeCases(array(23, 7), array(22, 8), "leo");
 
-        $this->edgeCases($start, $end, "cancer");
-    }
+        // 23 August – 23 September - virgo
+        $this->edgeCases(array(23, 8), array(23, 9), "virgo");
 
-    public function testLeo()
-    {
-        // 23 July – 22 August
-        $start = array(23, 7);
-        $end = array (22, 8);
+        // 24 September – 23 October - libra
+        $this->edgeCases(array(24, 9), array(23, 10), "libra");
 
-        $this->edgeCases($start, $end, "leo");
-    }
+        // 24 October – 22 November - scorpio
+        $this->edgeCases(array(24, 10), array(22, 11), "scorpio");
 
-    public function testVirgo()
-    {
-        // 23 August – 23 September
-        $start = array(23, 8);
-        $end = array (23, 9);
+        // 23 November – 21 December - sagittarius
+        $this->edgeCases(array(23, 11), array(21, 12), "sagittarius");
 
-        $this->edgeCases($start, $end, "virgo");
-    }
+        // 22 December – 20 January - capricorn
+        $this->edgeCases(array(22, 12), array(20, 1), "capricorn");
 
-    public function testLibra()
-    {
-        // 24 September – 23 October
-        $start = array(24, 9);
-        $end = array (23, 10);
+        // 21 January – 19 February - aquarius
+        $this->edgeCases(array(21, 1), array(19, 2), "aquarius");
 
-        $this->edgeCases($start, $end, "libra");
-    }
-
-    public function testScorpio()
-    {
-        // 24 October – 22 November
-        $start = array(24, 10);
-        $end = array (22, 11);
-
-        $this->edgeCases($start, $end, "scorpio");
-    }
-
-    public function testSagittarius()
-    {
-        // 23 November – 21 December
-        $start = array(23, 11);
-        $end = array (21, 12);
-
-        $this->edgeCases($start, $end, "sagittarius");
-    }
-
-    public function testCapricorn()
-    {
-        // 22 December – 20 January
-        $start = array(22, 12);
-        $end = array (20, 1);
-
-        $this->edgeCases($start, $end, "capricorn");
-    }
-
-    public function testAquarius()
-    {
-        // 21 January – 19 February
-        $start = array(21, 1);
-        $end = array (19, 2);
-
-        $this->edgeCases($start, $end, "aquarius");
-    }
-
-    public function testPisces()
-    {
-        // 20 February – 20 March
-        $start = array(20, 2);
-        $end = array (20, 3);
-
-        $this->edgeCases($start, $end, "pisces");
+        // 20 February – 20 March - pisces
+        $this->edgeCases(array(20, 2), array(20, 3), "pisces");
     }
 
     protected function edgeCases($first, $last, $sign)
