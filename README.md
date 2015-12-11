@@ -1,6 +1,7 @@
 # ZodiacSign
 Zodiac Sign provides a php calculator to calculate the zodiac sign from a given day and month.
 
+
 ## Status
 [![Build Status](https://travis-ci.org/whatsma/ZodiacSign.png)](https://travis-ci.org/whatsma/ZodiacSign)
 [![Test Coverage](https://codeclimate.com/github/whatsma/ZodiacSign/badges/coverage.svg)](https://codeclimate.com/github/whatsma/ZodiacSign/coverage)
