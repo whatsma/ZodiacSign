@@ -5,7 +5,6 @@ use Whatsma\ZodiacSign\Calculator;
  
 class InvalidDayOfMonthTest extends \PHPUnit_Framework_TestCase
 {
- 
     /**
      * @expectedException Whatsma\ZodiacSign\InvalidDayException
      */
