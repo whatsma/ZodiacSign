@@ -1,7 +1,7 @@
 build: false
 shallow_clone: false
 platform: 'x86'
-clone_folder: C:\projects\zodiac-sign
+clone_folder: C:\projects\zodiacsign
 init:
   - cinst php
   - SET PATH=C:\tools\php\;%PATH%
@@ -16,9 +16,9 @@ install:
   - echo extension=php_fileinfo.dll >> php.ini
   - echo extension=php_curl.dll >> php.ini
   - echo extension=php_pdo_sqlite.dll >> php.ini
-  - cd C:\projects\phpunit-vw
+  - cd C:\projects\zodiacsign
   - php -r "readfile('https://getcomposer.org/installer');" | php
   - php composer.phar install --prefer-dist --no-interaction
 test_script:
-  - cd C:\projects\zodiac-sign
+  - cd C:\projects\zodiacsign
   - vendor\bin\phpunit.bat
