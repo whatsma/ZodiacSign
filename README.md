@@ -8,7 +8,6 @@ Zodiac Sign provides a php calculator to calculate the zodiac sign from a given 
 [![Test Coverage](https://codeclimate.com/github/whatsma/ZodiacSign/badges/coverage.svg)](https://codeclimate.com/github/whatsma/ZodiacSign/coverage)
 [![Code Climate](https://codeclimate.com/github/whatsma/ZodiacSign/badges/gpa.svg)](https://codeclimate.com/github/whatsma/ZodiacSign)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/whatsma/ZodiacSign/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/whatsma/ZodiacSign/?branch=master)
-<img src="https://img.shields.io/github/license/whatsma/ZodiacSign.svg">
 [![GitHub license](https://img.shields.io/github/license/whatsma/ZodiacSign.svg)](https://github.com/whatsma/ZodiacSign/blob/master/LICENSE)
 
 
