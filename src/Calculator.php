@@ -1,8 +1,22 @@
 <?php
+/**
+ * ZodiacSign (https://github.com/whatsma/ZodiacSign)
+ *
+ * @link      https://github.com/whatsma/ZodiacSign
+ * @license   MIT License
+ */
 namespace Whatsma\ZodiacSign;
 
 class Calculator
 {
+    /**
+     * @access public
+     * @param int $day day of the month, a number between 1 and 31
+     * @param int $month month of the year, a number between 1 and 12
+     * @return string the zodiac sign, in lower case.
+     * @throws InvalidDayException input day is invalid
+     * @throws InvalidMonthException input month is invalid
+     */
     public function calculate($day, $month)
     {
         switch ($month) {
@@ -71,8 +85,15 @@ class Calculator
         }
     }
 
-
-
+    /**
+     * @access private
+     * @param int $day
+     * @param int $break
+     * @param string $firstSign
+     * @param string $secondSign
+     * @param int $maximumDaysInMonth
+     * @return string 
+     */
     protected function monthSplit($day, $break, $firstSign, $secondSign, $maximumDaysInMonth)
     {
         if (($day < 1) || ($day > $maximumDaysInMonth)) {
