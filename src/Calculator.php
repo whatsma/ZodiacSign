@@ -92,7 +92,7 @@ class Calculator
      * @param string $firstSign
      * @param string $secondSign
      * @param int $maximumDaysInMonth
-     * @return string 
+     * @return string
      */
     protected function monthSplit($day, $break, $firstSign, $secondSign, $maximumDaysInMonth)
     {
