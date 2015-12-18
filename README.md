@@ -11,7 +11,7 @@ php calculator to calculate the zodiac sign for a given day and month.
 [![GitHub license](https://img.shields.io/github/license/whatsma/ZodiacSign.svg)](https://github.com/whatsma/ZodiacSign/blob/master/LICENSE)
 
 
-## Oveview
+## Overview
 
 Given a month (integer from 1 to 12) and a day (integer from 1 to 31), calculate the zodiac sign.
 
