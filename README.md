@@ -1,5 +1,5 @@
 # ZodiacSign
-Zodiac Sign provides a php calculator to calculate the zodiac sign from a given day and month.
+php calculator to calculate the zodiac sign for a given day and month.
 
 
 ## Status
@@ -15,22 +15,9 @@ Zodiac Sign provides a php calculator to calculate the zodiac sign from a given 
 
 Given a month (integer from 1 to 12) and a day (integer from 1 to 31), calculate the zodiac sign.
 
-Returns one of the following strings, representing the zodiac sign:
-
-* aries
-* taurus
-* gemini
-* cancer
-* leo
-* virgo
-* libra
-* scorpio
-* sagittarius
-* capricorn
-* aquarius 
-* pisces
+Returns a lower case string representing a zodiac sign, eg "aries".
 
 Or raises an Exception if the input month and day are invalid (or represent an invalid day of the year, such as 31st of February).
 
-## See It All In Action!
+## See It In Action
 [www.whatzodiacsignami.com](http://www.whatzodiacsignami.com)
