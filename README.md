@@ -10,6 +10,15 @@ php calculator to calculate the zodiac sign for a given day and month.
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/whatsma/ZodiacSign/badges/quality-score.png)](https://scrutinizer-ci.com/g/whatsma/ZodiacSign)
 [![GitHub license](https://img.shields.io/github/license/whatsma/ZodiacSign.svg)](https://github.com/whatsma/ZodiacSign/blob/master/LICENSE)
 
+## Installation
+
+The easiest way to install ZodiacSign is using [Composer](https://getcomposer.org/).
+
+```bash
+$ composer require whatsma/zodiacsign dev-master
+```
+
+ZodiacSign requires PHP 5.3 or later.
 
 ## Overview
 
@@ -25,6 +34,27 @@ Raises an InvalidDayException:
 
 * if the day is invalid (eg is non int, or has a value of 32)
 * if the day is an invalid day of the month, such as 31st of February)
+
+## Example
+
+```php
+
+<?php
+require_once __DIR__.'/vendor/autoload.php';
+
+use Whatsma\ZodiacSign;
+
+$calculator = new ZodiacSign\Calculator();
+
+try {
+  $zodiacSign = $calculator->calculate(17,8);
+  echo $zodiacSign . "\n";
+} catch (ZodiacSign\InvalidDayException $e) {
+  echo "ERROR: Invalid Day";
+} catch (ZodiacSign\InvalidMonthException $e) {
+  echo "ERROR: Invalid Month";
+}
+```
 
 ## See It In Action
 [www.whatzodiacsignami.com](http://www.whatzodiacsignami.com)
