@@ -21,19 +21,19 @@ class Calculator
     {
         // check month is valid
         if (!isset($this->MONTHS[$month])) {
-          throw new InvalidMonthException;
+            throw new InvalidMonthException;
         }
 
         // check day is valid
         if (($day < 1) || ($day > $this->MONTHS[$month]['days_in_month'])) {
-          throw new InvalidDayException;
+            throw new InvalidDayException;
         }
 
         // return first or second sign
         if ($day <= $this->MONTHS[$month]['split_day']) {
-           return $this->MONTHS[$month]['first_sign'] ;
+             return $this->MONTHS[$month]['first_sign'] ;
         } else {
-            return $this->MONTHS[$month]['second_sign'];
+              return $this->MONTHS[$month]['second_sign'];
         }
     }
 
