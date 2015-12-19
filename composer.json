@@ -1,5 +1,5 @@
 {
-    "name": "whatsma/ZodiacSign",
+    "name": "whatsma/zodiacsign",
     "description": "Calculates the zodiac sign for a given day and month.",
     "type": "package",
     "license": "MIT",
