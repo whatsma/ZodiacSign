@@ -19,75 +19,85 @@ class Calculator
      */
     public function calculate($day, $month)
     {
-        switch ($month) {
-            case 1:
-                // january
-                return $this->monthSplit($day, 20, "capricorn", "aquarius", 31);
+        // check month is valid
+        if (!isset($this->MONTHS[$month])) {
+          throw new InvalidMonthException;
+        }
 
-            case 2:
-                // february
-                return $this->monthSplit($day, 19, "aquarius", "pisces", 29);
+        // check day is valid
+        if (($day < 1) || ($day > $this->MONTHS[$month]['days_in_month'])) {
+          throw new InvalidDayException;
+        }
 
-            case 3:
-                // march
-                return $this->monthSplit($day, 20, "pisces", "aries", 31);
-
-            case 4:
-                // april
-                return $this->monthSplit($day, 20, "aries", "taurus", 30);
-
-            case 5:
-                // may
-                return $this->monthSplit($day, 21, "taurus", "gemini", 31);
-
-            case 6:
-                // june
-                return $this->monthSplit($day, 21, "gemini", "cancer", 30);
-
-            case 7:
-                // july
-                return $this->monthSplit($day, 22, "cancer", "leo", 31);
-
-            case 8:
-                // august
-                return $this->monthSplit($day, 22, "leo", "virgo", 31);
-
-            case 9:
-                // september
-                return $this->monthSplit($day, 23, "virgo", "libra", 30);
-
-            case 10:
-                // october
-                return $this->monthSplit($day, 23, "libra", "scorpio", 31);
-
-            case 11:
-                // november
-                return $this->monthSplit($day, 22, "scorpio", "sagittarius", 30);
-
-            case 12:
-                // december
-                return $this->monthSplit($day, 21, "sagittarius", "capricorn", 31);
-
-            default:
-                throw new InvalidMonthException();
+        // return first or second sign
+        if ($day <= $this->MONTHS[$month]['split_day']) {
+           return $this->MONTHS[$month]['first_sign'] ;
+        } else {
+            return $this->MONTHS[$month]['second_sign'];
         }
     }
 
-    /**
-     * @access private
-     * @param int $day
-     * @param int $break
-     * @param string $firstSign
-     * @param string $secondSign
-     * @param int $maximumDaysInMonth
-     * @return string
-     */
-    protected function monthSplit($day, $break, $firstSign, $secondSign, $maximumDaysInMonth)
-    {
-        if (($day < 1) || ($day > $maximumDaysInMonth)) {
-            throw new InvalidDayException();
-        }
 
-        return $day <= $break ? $firstSign : $secondSign;
-    }
+
+    private $MONTHS = array(
+          1 => array('name'             => 'january',
+                     'split_day'        => 20,
+                     'first_sign'       => 'capricorn',
+                     'second_sign'      => 'aquarius',
+                     'days_in_month'    => 31),
+          2 => array('name'             => 'february',
+                     'split_day'        => 19,
+                     'first_sign'       => 'aquarius',
+                     'second_sign'      => 'pisces',
+                     'days_in_month'    => 29),
+          3 => array('name'             => 'march',
+                     'split_day'        => 20,
+                     'first_sign'       => 'pisces',
+                     'second_sign'      => 'aries',
+                     'days_in_month'    => 31),
+          4 => array('name'             => 'april',
+                     'split_day'        => 20,
+                     'first_sign'       => 'aries',
+                     'second_sign'      => 'taurus',
+                     'days_in_month'    => 30),
+          5 => array('name'             => 'may',
+                     'split_day'        => 21,
+                     'first_sign'       => 'taurus',
+                     'second_sign'      => 'gemini',
+                     'days_in_month'    => 31),
+          6 => array('name'             => 'june',
+                     'split_day'        => 21,
+                     'first_sign'       => 'gemini',
+                     'second_sign'      => 'cancer',
+                     'days_in_month'    => 30),
+          7 => array('name'             => 'july',
+                     'split_day'        => 22,
+                     'first_sign'       => 'cancer',
+                     'second_sign'      => 'leo',
+                     'days_in_month'    => 31),
+          8 => array('name'             => 'august',
+                     'split_day'        => 22,
+                     'first_sign'       => 'leo',
+                     'second_sign'      => 'virgo',
+                     'days_in_month'    => 31),
+          9 => array('name'             => 'september',
+                     'split_day'        => 23,
+                     'first_sign'       => 'virgo',
+                     'second_sign'      => 'libra',
+                     'days_in_month'    => 30),
+          10 => array('name'            => 'october',
+                     'split_day'        => 23,
+                     'first_sign'       => 'libra',
+                     'second_sign'      => 'scorpio',
+                     'days_in_month'    => 31),
+          11 => array('name'            => 'november',
+                     'split_day'        => 22,
+                     'first_sign'       => 'scorpio',
+                     'second_sign'      => 'sagittarius',
+                     'days_in_month'    => 30),
+          12 => array('name'            => 'december',
+                     'split_day'        => 21,
+                     'first_sign'       => 'sagittarius',
+                     'second_sign'      => 'capricorn',
+                     'days_in_month'    => 31));
 }
