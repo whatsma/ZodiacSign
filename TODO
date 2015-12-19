@@ -1,4 +1,3 @@
 change repo name?
 add coveralls.io badge instead of codeclimate?
 composer validate --strict - raise issue with phpunit?
- 
