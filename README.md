@@ -56,5 +56,6 @@ try {
 }
 ```
 
-## See It In Action
-[www.whatzodiacsignami.com](http://www.whatzodiacsignami.com)
+## ZodiacSign Calculator in the wild
+
+* [www.whatzodiacsignami.com](http://www.whatzodiacsignami.com)
