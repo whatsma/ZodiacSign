@@ -59,3 +59,4 @@ try {
 ## ZodiacSign Calculator in the wild
 
 * [www.whatzodiacsignami.com](http://www.whatzodiacsignami.com)
+* [www.sunsigncalculator.com](http://www.sunsigncalculator.com)
