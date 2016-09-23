@@ -21,8 +21,7 @@ script:
   - composer validate --strict
   - ./vendor/bin/phpunit --coverage-clover build/logs/clover.xml
   - ./vendor/bin/phpcs --standard=PSR2 src tests
-  # if xdebug isn't enabled, test-reporter will fail and the build will fail...
-  - if [[ "$(php --version | grep -cim1 xdebug)" -ge 1 ]]; then ./vendor/bin/test-reporter; fi
+  - ./vendor/bin/test-reporter
 
 
 after_script:
