@@ -10,6 +10,8 @@ php calculator to calculate the zodiac sign for a given day and month.
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/whatsma/ZodiacSign/badges/quality-score.png)](https://scrutinizer-ci.com/g/whatsma/ZodiacSign)
 [![GitHub license](https://img.shields.io/github/license/whatsma/ZodiacSign.svg)](https://github.com/whatsma/ZodiacSign/blob/master/LICENSE)
 
+[![PHP Versions Tested](https://php-eye.com/badge/whatsma/ZodiacSign/tested.svg)](https://php-eye.com/package/whatsma/ZodiacSign)
+
 ## Installation
 
 The easiest way to install ZodiacSign is using [Composer](https://getcomposer.org/).
