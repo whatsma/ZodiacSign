@@ -11,7 +11,7 @@ php:
  
 install:
   - composer self-update
-  - composer require satooshi/php-coveralls:0.6.*
+  - composer require satooshi/php-coveralls:~1.0
   - composer require squizlabs/php_codesniffer:2.*
   - composer require codeclimate/php-test-reporter:v0.2.*
   - composer install --no-interaction
@@ -20,8 +20,7 @@ script:
   - composer validate --strict
   - ./vendor/bin/phpunit --coverage-clover build/logs/clover.xml
   - ./vendor/bin/phpcs --standard=PSR2 src tests
-  # if xdebug isn't enabled, test-reporter will fail and build will fail
-  # see https://github.com/travis-ci/travis-ci/issues/6321 for code below
+  # if xdebug isn't enabled, test-reporter will fail and the build will fail...
   - if [[ "$(php --version | grep -cim1 xdebug)" -ge 1 ]]; then ./vendor/bin/test-reporter; fi
 
 
