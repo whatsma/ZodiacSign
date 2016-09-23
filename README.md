@@ -53,8 +53,8 @@ use Whatsma\ZodiacSign;
 $calculator = new ZodiacSign\Calculator();
 
 try {
-    $day = 1;
-    $month = 1;
+    $day = 17;
+    $month = 8;
     $zodiacSign = $calculator->calculate($day, $month);
     echo $zodiacSign . "\n";
 } catch (ZodiacSign\InvalidDayException $e) {
