@@ -45,7 +45,6 @@ Raises an InvalidDayException:
 ## Example
 
 ```php
-
 <?php
 require_once __DIR__.'/vendor/autoload.php';
 
@@ -54,7 +53,9 @@ use Whatsma\ZodiacSign;
 $calculator = new ZodiacSign\Calculator();
 
 try {
-    $zodiacSign = $calculator->calculate(17,8);
+    $day = 1;
+    $month = 1;
+    $zodiacSign = $calculator->calculate($day, $month);
     echo $zodiacSign . "\n";
 } catch (ZodiacSign\InvalidDayException $e) {
     echo "ERROR: Invalid Day";
