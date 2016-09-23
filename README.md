@@ -1,15 +1,17 @@
 # ZodiacSign
 php calculator to calculate the zodiac sign for a given day and month.
 
-## Build Status
+## Status
+
+### Build
 [![Linux Build Status](https://img.shields.io/travis/whatsma/ZodiacSign/master.svg?label=unix%20build)](https://travis-ci.org/whatsma/ZodiacSign)
 [![Windows Build Status](https://img.shields.io/appveyor/ci/whatsma/ZodiacSign/master.svg?label=windows%20build)](https://ci.appveyor.com/project/whatsma/zodiacsign)
 [![PHP Versions Tested](https://php-eye.com/badge/whatsma/ZodiacSign/tested.svg)](https://php-eye.com/package/whatsma/ZodiacSign)
 
-## Test Coverage
+### Test Coverage
 [![Test Coverage](https://codeclimate.com/github/whatsma/ZodiacSign/badges/coverage.svg)](https://codeclimate.com/github/whatsma/ZodiacSign/coverage)
 
-## Code Quality
+### Code Quality
 [![Code Climate](https://codeclimate.com/github/whatsma/ZodiacSign/badges/gpa.svg)](https://codeclimate.com/github/whatsma/ZodiacSign)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/whatsma/ZodiacSign/badges/quality-score.png)](https://scrutinizer-ci.com/g/whatsma/ZodiacSign)
 
