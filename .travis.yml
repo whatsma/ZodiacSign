@@ -11,8 +11,8 @@ php:
  
 install:
   - composer self-update
-  - composer require satooshi/php-coveralls:^1.0,
-  - composer require squizlabs/php_codesniffer:^2.7,
+  - composer require satooshi/php-coveralls:^1.0
+  - composer require squizlabs/php_codesniffer:^2.7
   - composer require codeclimate/php-test-reporter:^0.3.2
   - composer install --no-interaction
   - composer show
