@@ -16,6 +16,8 @@ install:
   - composer require codeclimate/php-test-reporter:^0.3.2
   - composer install --no-interaction
   - composer show
+  - cat composer.json
+  - cat composer.lock
  
 script:
   - composer validate --strict
