@@ -4,9 +4,9 @@ platform: 'x86'
 clone_folder: C:\projects\zodiacsign
 init:
   - cinst php
-  - SET PATH=C:\tools\php\;%PATH%
+  - SET PATH=C:\tools\php71\;%PATH%
 install:
-  - cd c:\tools\php
+  - cd c:\tools\php71
   - copy php.ini-production php.ini
   - echo date.timezone="UTC" >> php.ini
   - echo extension_dir=ext >> php.ini
