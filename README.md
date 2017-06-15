@@ -25,7 +25,7 @@ The easiest way to install ZodiacSign is using [Composer](https://getcomposer.or
 $ composer require whatsma/zodiacsign:^1.0
 ```
 
-ZodiacSign requires PHP 5.3 or later.
+ZodiacSign requires PHP 5.4 or later.
 
 ## Overview
 
