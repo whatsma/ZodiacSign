@@ -3,7 +3,8 @@ shallow_clone: false
 platform: 'x86'
 clone_folder: C:\projects\zodiacsign
 init:
-  - cinst php
+  - ps: Set-Service wuauserv -StartupType Manual
+  - cinst -y php
   - SET PATH=C:\tools\php71\;%PATH%
 install:
   - cd c:\tools\php71
