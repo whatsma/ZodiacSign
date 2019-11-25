@@ -3,6 +3,8 @@ php calculator to calculate the zodiac sign for a given day and month.
 
 ## Status
 
+[![Latest Stable Version](https://poser.pugx.org/phpunit/phpunit/version)](https://packagist.org/packages/phpunit/phpunit)
+
 [![Latest Stable Version](https://poser.pugx.org/whatsma/zodiacsign/v/stable)](https://packagist.org/packages/whatsma/zodiacsign)
 [![Total Downloads](https://poser.pugx.org/whatsma/zodiacsign/downloads)](https://packagist.org/packages/whatsma/zodiacsign)
 
@@ -66,5 +68,6 @@ try {
 
 ## ZodiacSign Calculator in the wild
 
+* [What Sign Am I?](http://www.whatsignami.com)
 * [What Zodiac Sign Am I?](http://www.whatzodiacsignami.com)
 * [Sun Sign Calculator](http://www.sunsigncalculator.com)
