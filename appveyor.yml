@@ -5,6 +5,7 @@ clone_folder: C:\projects\zodiacsign
 init:
   - ps: Set-Service wuauserv -StartupType Manual
   - cinst -y php
+  - SET PATH=c:\tools\php73;%PATH%
 install:
   - cd c:\tools\php73
   - copy php.ini-production php.ini
