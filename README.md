@@ -67,6 +67,6 @@ try {
 
 ## ZodiacSign Calculator in the wild
 
-* [What Sign Am I?](http://www.whatsignami.com)
-* [What Zodiac Sign Am I?](http://www.whatzodiacsignami.com)
-* [Sun Sign Calculator](http://www.sunsigncalculator.com)
+* [What Zodiac Sign Am I?](https://www.whatzodiacsignami.com)
+* [Sun Sign Calculator](https://www.sunsigncalculator.com)
+* [What Sign Am I?](https://www.whatsignami.com)
