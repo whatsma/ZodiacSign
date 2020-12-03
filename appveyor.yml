@@ -5,9 +5,9 @@ clone_folder: C:\projects\zodiacsign
 init:
   - ps: Set-Service wuauserv -StartupType Manual
   - cinst -y php
-  - SET PATH=c:\tools\php74;%PATH%
+  - SET PATH=c:\tools\php80;%PATH%
 install:
-  - cd c:\tools\php74
+  - cd C:\tools\php80
   - copy php.ini-production php.ini
   - echo date.timezone="UTC" >> php.ini
   - echo extension_dir=ext >> php.ini
