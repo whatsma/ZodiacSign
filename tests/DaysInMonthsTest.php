@@ -4,7 +4,7 @@ namespace Whatsma\ZodiacSign;
 use Whatsma\ZodiacSign\Calculator;
 use Whatsma\ZodiacSign\InvalidDayException;
  
-class DaysInMonthsTest extends \PHPUnit_Framework_TestCase
+class DaysInMonthsTest extends \PHPUnit\Framework\TestCase
 {
     public function testDays()
     {
@@ -61,7 +61,7 @@ class DaysInMonthsTest extends \PHPUnit_Framework_TestCase
 
     public function shouldFail($day, $month)
     {
-        $this->setExpectedException('Whatsma\ZodiacSign\InvalidDayException');
+        $this->expectException('Whatsma\ZodiacSign\InvalidDayException');
         $calculator = new Calculator;
         $calculator->calculate($day, $month);
         $this->fail('An exception should have been raised.');

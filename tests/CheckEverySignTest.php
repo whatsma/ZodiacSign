@@ -3,7 +3,7 @@ namespace Whatsma\ZodiacSign;
 
 use Whatsma\ZodiacSign\Calculator;
  
-class CheckEverySignTest extends \PHPUnit_Framework_TestCase
+class CheckEverySignTest extends \PHPUnit\Framework\TestCase
 {
  
     public function testInvalidMonth()

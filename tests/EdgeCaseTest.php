@@ -3,7 +3,7 @@ namespace Whatsma\ZodiacSign;
 
 use Whatsma\ZodiacSign\Calculator;
  
-class EdgeCaseTest extends \PHPUnit_Framework_TestCase
+class EdgeCaseTest extends \PHPUnit\Framework\TestCase
 {
     public function testSigns()
     {
