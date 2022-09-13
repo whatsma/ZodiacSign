@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/whatsma/new1/blob/main/logo/zodiac-sign.png"
+  <img src="https://github.com/whatsma/ZodiacSign/blob/main/logo/zodiac-sign.png"
        alt="Zodiac Sign Calculator in PHP"
        width="400" />
 </p>
@@ -14,9 +14,9 @@ A PHP calculator to calculate the zodiac sign for a given day and month.
 [![Latest Stable Version](https://poser.pugx.org/whatsma/zodiacsign/v/stable)](https://packagist.org/packages/whatsma/zodiacsign)
 [![PHP Version Require](http://poser.pugx.org/whatsma/ZodiacSign/require/php)](https://packagist.org/packages/whatsma/zodiacsign)
 
-[![Multi PHP Versions](https://github.com/whatsma/new1/actions/workflows/ci-multiple-php-versions.yml/badge.svg)](https://github.com/whatsma/new1/actions/workflows/ci-multiple-php-versions.yml)
-[![Windows/Mac](https://github.com/whatsma/new1/actions/workflows/ci-windows-mac.yml/badge.svg)](https://github.com/whatsma/new1/actions/workflows/ci-windows-mac.yml)
-[![Static Code Analysis](https://github.com/whatsma/new1/actions/workflows/ci-static.yml/badge.svg)](https://github.com/whatsma/new1/actions/workflows/ci-static.yml)
+[![Multi PHP Versions](https://github.com/whatsma/ZodiacSign/actions/workflows/ci-multiple-php-versions.yml/badge.svg)](https://github.com/whatsma/ZodiacSign/actions/workflows/ci-multiple-php-versions.yml)
+[![Windows/Mac](https://github.com/whatsma/ZodiacSign/actions/workflows/ci-windows-mac.yml/badge.svg)](https://github.com/whatsma/ZodiacSign/actions/workflows/ci-windows-mac.yml)
+[![Static Code Analysis](https://github.com/whatsma/ZodiacSign/actions/workflows/ci-static.yml/badge.svg)](https://github.com/whatsma/ZodiacSign/actions/workflows/ci-static.yml)
 
 [![Test Coverage](https://codeclimate.com/github/whatsma/ZodiacSign/badges/coverage.svg)](https://codeclimate.com/github/whatsma/ZodiacSign/coverage)
 [![Code Climate](https://codeclimate.com/github/whatsma/ZodiacSign/badges/gpa.svg)](https://codeclimate.com/github/whatsma/ZodiacSign)
