@@ -1,18 +1,22 @@
 {
     "name": "whatsma/zodiacsign",
     "description": "Calculates the zodiac sign for a given day and month.",
+    "scripts": {
+        "test": "phpunit",
+        "lint": "phpstan analyze --level 5 src tests"
+    },
     "type": "package",
     "license": "MIT",
-    "keywords": ["zodiac sign" , "sun sign", "star sign", "astrological sign"],
     "authors": [
         {
             "name": "Wha Tsma",
             "email": "whatsma.notthisbit@whatzodiacsignami.com"
         }
     ],
+    "keywords": ["zodiac", "horoscope", "astrology", "zodiac sign" , "sun sign", "star sign"],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=7.2.0"
     },
     "autoload": {
         "psr-4": {
@@ -20,6 +24,7 @@
         }
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^8.0",
+        "phpstan/phpstan": "^1.8"
     }
 }
