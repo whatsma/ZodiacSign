@@ -1,13 +1,22 @@
-# ZodiacSign
-PHP calculator to calculate the zodiac sign for a given day and month.
+<p align="center">
+  <img src="https://github.com/whatsma/new1/blob/main/logo/zodiac-sign.png"
+       alt="Zodiac Sign Calculator in PHP"
+       width="400" />
+</p>
+
+# Zodiac Sign Calculator
+A PHP calculator to calculate the zodiac sign for a given day and month.
+
 
 ## Status
 
 [![Total Downloads](https://poser.pugx.org/whatsma/zodiacsign/downloads)](https://packagist.org/packages/whatsma/zodiacsign)
 [![Latest Stable Version](https://poser.pugx.org/whatsma/zodiacsign/v/stable)](https://packagist.org/packages/whatsma/zodiacsign)
+[![PHP Version Require](http://poser.pugx.org/whatsma/ZodiacSign/require/php)](https://packagist.org/packages/whatsma/zodiacsign)
 
-[![Linux Build Status](https://img.shields.io/travis/whatsma/ZodiacSign/master.svg?label=unix%20build)](https://travis-ci.org/whatsma/ZodiacSign)
-[![Windows Build Status](https://img.shields.io/appveyor/ci/whatsma/ZodiacSign/master.svg?label=windows%20build)](https://ci.appveyor.com/project/whatsma/zodiacsign)
+[![Multi PHP Versions](https://github.com/whatsma/new1/actions/workflows/ci-multiple-php-versions.yml/badge.svg)](https://github.com/whatsma/new1/actions/workflows/ci-multiple-php-versions.yml)
+[![Windows/Mac](https://github.com/whatsma/new1/actions/workflows/ci-windows-mac.yml/badge.svg)](https://github.com/whatsma/new1/actions/workflows/ci-windows-mac.yml)
+[![Static Code Analysis](https://github.com/whatsma/new1/actions/workflows/ci-static.yml/badge.svg)](https://github.com/whatsma/new1/actions/workflows/ci-static.yml)
 
 [![Test Coverage](https://codeclimate.com/github/whatsma/ZodiacSign/badges/coverage.svg)](https://codeclimate.com/github/whatsma/ZodiacSign/coverage)
 [![Code Climate](https://codeclimate.com/github/whatsma/ZodiacSign/badges/gpa.svg)](https://codeclimate.com/github/whatsma/ZodiacSign)
@@ -16,17 +25,20 @@ PHP calculator to calculate the zodiac sign for a given day and month.
 [![GitHub license](https://img.shields.io/github/license/whatsma/ZodiacSign.svg)](https://github.com/whatsma/ZodiacSign/blob/master/LICENSE)
 
 
+## OLD - status
+[![Linux Build Status](https://img.shields.io/travis/whatsma/ZodiacSign/master.svg?label=unix%20build)](https://travis-ci.org/whatsma/ZodiacSign)
+[![Windows Build Status](https://img.shields.io/appveyor/ci/whatsma/ZodiacSign/master.svg?label=windows%20build)](https://ci.appveyor.com/project/whatsma/zodiacsign)
+
+
 ## Installation
 
-The easiest way to install ZodiacSign is using [Composer](https://getcomposer.org/).
+Install ZodiacSign using [Composer](https://getcomposer.org/):
 
 ```bash
 $ composer require whatsma/zodiacsign:^1.0
 ```
 
-ZodiacSign requires PHP 5.4 or later.
-
-## Overview
+## Usage
 
 Given a month (integer from 1 to 12) and a day (integer from 1 to 31), calculate the zodiac sign.
 
@@ -41,7 +53,7 @@ Raises an InvalidDayException:
 * if the day is invalid (eg is non int, or has a value of 32)
 * if the day is an invalid day of the month, such as 31st of February)
 
-## Example
+### Example
 
 ```php
 <?php
@@ -61,11 +73,13 @@ try {
 } catch (ZodiacSign\InvalidMonthException $e) {
     echo "ERROR: Invalid Month";
 }
+
+// output: "leo"
 ```
 
-## ZodiacSign Calculator in the wild
+## Zodiac Sign Calculator out there, in the wild
 
-* [Sun Sign Calculator](https://www.sunsigncalculator.com)
 * [What Zodiac Sign Am I?](https://www.whatzodiacsignami.com)
+* [Sun Sign Calculator](https://www.sunsigncalculator.com)
 * [What Star Sign Am I?](https://www.whatstarsignami.com)
 * [What Sign Am I?](https://www.whatsignami.com)
